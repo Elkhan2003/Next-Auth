@@ -15,13 +15,7 @@ export default function Login() {
 	if (session) {
 		return (
 			<>
-				<button
-					onClick={() => signOut()}
-					type="button"
-					className="btn btn-primary"
-				>
-					Sign Out of Google
-				</button>
+				<button onClick={() => signOut()}>Sign Out of Google</button>
 				<UserCard user={session?.user} />
 			</>
 		);
