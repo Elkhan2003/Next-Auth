@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { DefaultSession } from "next-auth";
 
 interface UserCardProps {
-	user: DefaultSession["user"];
+	user?: DefaultSession["user"];
 }
 
 const UserCard: FC<UserCardProps> = ({ user }) => {
