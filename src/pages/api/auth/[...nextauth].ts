@@ -16,5 +16,6 @@ export default NextAuth({
 		// 		"417722966225-p2ai9kjph0vhpoh3qtbq73f2tvubi18j.apps.googleusercontent.com",
 		// 	clientSecret: "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"
 		// })
-	]
+	],
+	secret: "e0664de657da8ba33b16d6fc94dca1a5"
 });
