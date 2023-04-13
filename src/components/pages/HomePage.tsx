@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import Login from "./Login";
 
-// localhost:3000
-
 const HomePage: FC = () => {
 	return (
 		<div style={{ width: "500px", margin: "0 auto", paddingTop: "30px" }}>

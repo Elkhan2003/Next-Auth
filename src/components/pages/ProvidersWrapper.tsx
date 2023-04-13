@@ -1,13 +1,11 @@
+import React, { FC, ReactNode } from "react";
 import { SessionProvider } from "next-auth/react";
 
-export default function ProvidersWrapper({
-	children
-}: {
-	children: React.ReactNode;
-}) {
-	return (
-		<SessionProvider>
-			{children} {/* Our entire app -> has access to NextAuth */}
-		</SessionProvider>
-	);
+interface ProvidersWrapperProps {
+	children: ReactNode;
 }
+
+const ProvidersWrapper: FC<ProvidersWrapperProps> = ({ children }) => {
+	return <SessionProvider>{children}</SessionProvider>;
+};
+export default ProvidersWrapper;
