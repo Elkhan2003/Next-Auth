@@ -7,7 +7,7 @@ const Login: FC = () => {
 
 	// redirect to sign-in page if user is not authenticated
 	useEffect(() => {
-		if (status === "loading" || session) return; // do nothing while loading
+		if (status === "loading") return; // do nothing while loading
 		if (!session) {
 			signIn();
 		}
