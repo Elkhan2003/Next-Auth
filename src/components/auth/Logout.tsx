@@ -2,7 +2,7 @@ import React, { FC, useEffect } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import UserCard from "./userCard";
 
-const Login: FC = () => {
+const Logout: FC = () => {
 	const { data: session, status } = useSession();
 
 	// redirect to sign-in page if user is not authenticated
@@ -24,4 +24,4 @@ const Login: FC = () => {
 	}
 	return null; // or return an empty JSX element
 };
-export default Login;
+export default Logout;

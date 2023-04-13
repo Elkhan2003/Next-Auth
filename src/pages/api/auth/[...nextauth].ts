@@ -10,12 +10,9 @@ export default NextAuth({
 				"417722966225-rf8a10e9oj9dh3q9dehmovfhv1jqhf19.apps.googleusercontent.com",
 			clientSecret: "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"
 		})
-
-		// GoogleProvider({
-		// 	clientId:
-		// 		"417722966225-p2ai9kjph0vhpoh3qtbq73f2tvubi18j.apps.googleusercontent.com",
-		// 	clientSecret: "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"
-		// })
 	],
-	secret: "e0664de657da8ba33b16d6fc94dca1a5"
+	secret: "e0664de657da8ba33b16d6fc94dca1a5",
+	pages: {
+		signIn: "/auth/signin"
+	}
 });

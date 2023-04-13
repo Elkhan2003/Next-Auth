@@ -3,7 +3,7 @@ import scss from "./Layout.module.scss";
 import Head from "next/head";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
-import ProvidersWrapper from "@/components/pages/ProvidersWrapper";
+import ProvidersWrapper from "@/components/auth/ProvidersWrapper";
 
 import { Inter } from "next/font/google";
 
@@ -22,15 +22,17 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className={`${inter.className} ${scss.layout}`}>
-				<header>
-					<Header />
-				</header>
-				<ProvidersWrapper>{children}</ProvidersWrapper>
-				<footer>
-					<Footer />
-				</footer>
-			</div>
+			<ProvidersWrapper>
+				<div className={`${inter.className} ${scss.layout}`}>
+					<header>
+						<Header />
+					</header>
+					{children}
+					<footer>
+						<Footer />
+					</footer>
+				</div>
+			</ProvidersWrapper>
 		</>
 	);
 };
