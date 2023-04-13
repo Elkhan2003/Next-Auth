@@ -22,5 +22,6 @@ const Login: FC = () => {
 			</>
 		);
 	}
+	return null; // or return an empty JSX element
 };
 export default Login;
