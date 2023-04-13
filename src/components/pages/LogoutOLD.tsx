@@ -1,7 +1,8 @@
+import { FC } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import UserCard from "../auth/userCard";
 
-export default function Login() {
+const Logout: FC = () => {
 	// get session from nextAuth
 	const { data: session } = useSession();
 	console.log(session);
@@ -37,4 +38,5 @@ export default function Login() {
 	}
 
 	// if a user doesn't exist -> show a Sign In button
-}
+};
+export default Logout;

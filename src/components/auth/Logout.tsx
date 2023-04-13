@@ -21,7 +21,8 @@ const Logout: FC = () => {
 				<UserCard user={session?.user} />
 			</>
 		);
+	} else {
+		return null; // or return an empty JSX element
 	}
-	return null; // or return an empty JSX element
 };
 export default Logout;
