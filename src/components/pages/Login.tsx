@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { UserCard } from "./userCard";
+import UserCard from "./userCard";
 
-export default function Login() {
+const Login: FC = () => {
 	const { data: session, status } = useSession();
 
 	// redirect to sign-in page if user is not authenticated
 	useEffect(() => {
-		if (status === "loading") return; // do nothing while loading
+		if (status === "loading" || session) return; // do nothing while loading
 		if (!session) {
 			signIn();
 		}
@@ -22,4 +22,5 @@ export default function Login() {
 			</>
 		);
 	}
-}
+};
+export default Login;

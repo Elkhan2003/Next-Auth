@@ -1,8 +1,11 @@
+import React, { FC } from "react";
 import { DefaultSession } from "next-auth";
 
-// Default Session TYPE
+interface UserCardProps {
+	user: DefaultSession["user"];
+}
 
-export function UserCard({ user }: { user: DefaultSession["user"] }) {
+const UserCard: FC<UserCardProps> = ({ user }) => {
 	return (
 		<div className="card">
 			<div className="card-body">
@@ -13,4 +16,6 @@ export function UserCard({ user }: { user: DefaultSession["user"] }) {
 			</div>
 		</div>
 	);
-}
+};
+
+export default UserCard;
