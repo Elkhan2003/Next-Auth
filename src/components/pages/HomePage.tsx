@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import scss from "./Style.module.scss";
 import Logout from "../auth/Logout";
 import Image from "next/image";
 import test_imag1 from "@/assets/Screenshot_238.png";
@@ -12,8 +13,8 @@ const HomePage: FC = () => {
 		<div style={{ width: "500px", margin: "0 auto", paddingTop: "30px" }}>
 			<h3>Login Website</h3>
 			<Logout />
-			<Image src={test1} alt={test1} />
-			<Image src={test2} alt={test2} />
+			<Image className={scss.image_test} src={test1} alt={test1} />
+			<Image className={scss.image_test} src={test2} alt={test2} />
 		</div>
 	);
 };
