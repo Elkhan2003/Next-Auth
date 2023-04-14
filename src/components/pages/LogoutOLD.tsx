@@ -12,13 +12,7 @@ const Logout: FC = () => {
 	if (session) {
 		return (
 			<>
-				<button
-					onClick={() => signOut()}
-					type="button"
-					className="btn btn-primary"
-				>
-					Sign Out of Google
-				</button>
+				<button onClick={() => signOut()}>Sign Out of Google</button>
 				{/* Pass session info to server component */}
 				<UserCard user={session?.user} />
 			</>
